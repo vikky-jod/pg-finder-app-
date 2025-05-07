@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PG Finder - Home</title>
+
+  <!-- ✅ Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      background: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 1rem;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    .pg-card {
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    iframe {
+      border-radius: 10px;
+    }
+    .btn-custom {
+      background-color: #0077cc;
+      color: white;
+    }
+    .btn-custom:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="text-center mb-4">
+      <h1>PG Finder</h1>
+    </header>
+
+    <!-- ✅ Filter Section -->
+    <section class="card mb-4 p-3">
+      <h5 class="mb-3">🔍 Filter PGs</h5>
+      <form class="row g-3">
+        <!-- Price Range -->
+        <div class="col-md-6">
+          <label for="priceRange" class="form-label">Price Range</label>
+          <select class="form-select" id="priceRange">
+            <option selected>Choose...</option>
+            <option value="5k">₹5000 - ₹6000</option>
+            <option value="6k">₹6000 - ₹7000</option>
+            <option value="7k">₹7000 - ₹8000</option>
+            <option value="8k">₹8000 - ₹9000</option>
+            <option value="9k">₹9000 - ₹10000</option>
+          </select>
+        </div>
+
+        <!-- Room Type -->
+        <div class="col-md-6">
+          <label class="form-label">Room Type</label>
+          <div class="d-flex flex-wrap gap-2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="acRoom">
+              <label class="form-check-label" for="acRoom">AC</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="nonAcRoom">
+              <label class="form-check-label" for="nonAcRoom">Non-AC</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="twoShare">
+              <label class="form-check-label" for="twoShare">2 Sharing</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="threeShare">
+              <label class="form-check-label" for="threeShare">3 Sharing</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="coLiving">
+              <label class="form-check-label" for="coLiving">Co-Living</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary w-100">Apply Filters</button>
+        </div>
+      </form>
+    </section>
+
+
+    <section class="pg-list">
+      <h2 class="mb-3">Nearby PGs</h2>
+
+      <!-- PG Card 1 -->
+      <div class="card pg-card">
+        <div class="card-body">
+          <h5 class="card-title">Sunrise PG - ₹6000/mo</h5>
+          <p class="card-text">Room: Non-AC, 2 Sharing</p>
+          <iframe
+            src="https://www.google.com/maps/embed/v1/directions?key=YOUR_API_KEY&origin=Vel+Tech+University,+Chennai&destination=Sunrise+PG,+Avadi,+Chennai&zoom=14"
+            width="100%" height="250" style="border:0;" allowfullscreen loading="lazy">
+          </iframe>
+          <a href="detail.html" class="btn btn-custom mt-3 w-100">View Details</a>
+        </div>
+      </div>
+
+      <!-- PG Card 2 -->
+      <div class="card pg-card">
+        <div class="card-body">
+          <h5 class="card-title">Green Stay - ₹5500/mo</h5>
+          <p class="card-text">Room: AC, 3 Sharing</p>
+          <iframe
+            src="https://www.google.com/maps/embed/v1/directions?key=YOUR_API_KEY&origin=Vel+Tech+University,+Chennai&destination=Green+Stay+PG,+Avadi,+Chennai&zoom=14"
+            width="100%" height="250" style="border:0;" allowfullscreen loading="lazy">
+          </iframe>
+          <a href="detail.html" class="btn btn-custom mt-3 w-100">View Details</a>
+        </div>
+      </div>
+
+      <!-- PG Card 3 -->
+      <div class="card pg-card">
+        <div class="card-body">
+          <h5 class="card-title">Happy Nest - ₹6500/mo</h5>
+          <p class="card-text">Room: Co-Living, AC</p>
+          <iframe
+            src="https://www.google.com/maps/embed/v1/directions?key=YOUR_API_KEY&origin=Vel+Tech+University,+Chennai&destination=Happy+Nest+PG,+Avadi,+Chennai&zoom=14"
+            width="100%" height="250" style="border:0;" allowfullscreen loading="lazy">
+          </iframe>
+          <a href="detail.html" class="btn btn-custom mt-3 w-100">View Details</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center mt-4 mb-2">
+      <small class="text-muted"></small>
+    </footer>
+  </div>
+
+  <!-- ✅ Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
